@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic&amp;subsets=latin">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		
+		<title>Dylan Packard - Jets &amp; Hadrons</title>
+		
+		<script src="jquery-3.4.0.min.js"></script>
+		<script>
+			$(function(){
+				$("#header").load("header.html");
+			});
+		</script>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="maininfo">
+		  <h3> Jet Content Analysis in Hadronic Collisions </h3>
+		  <p> During my sophomore summer vacation and the duration of my senior
+			year, I worked on the research project that would become my senior
+			thesis. </p>
+		  <p> Initially, work was started at Wayne State University through their
+			REU program, where I was assigned the task of processing large
+			quantities of data in order to perform statistical analysis and
+			determine whether certain observables the team had previously posited
+			were physically significant. </p>
+		  <p> The project flow was relatively simple, with a three step process used
+			to create data, analyze and break that data down, then perform the
+			necessary analysis and print graphs. </p>
+			<br>
+		  <h4> 1. Data generation </h4>
+		  <p> For data generation, we used a Monte Carlo-based event generator known
+			as Pythia, which is capable of creating fairly accurate particle
+			collision events given a large number of specified initial conditions.
+			For this project, we simulated the 2013 ATLAS LHC p-p runs so we had a
+			verified collection of datato perform sanity checks on our own results.
+			This data was then saved to a custom structure breaking individual
+			resultant particles into their base information, which was stored into
+			another event structure. These were then saved off to a file for further
+			processing by the next phase.
+			<br>
+		  </p>
+		  <br>
+		  <h4> 2. Data processing (jet finding) </h4>
+		  <p> In the second stage, we take the output information from Pythia and
+			process the resultant particles to search for the jets we want to find.
+			In this case, a jet is a high-energy particle which is ejected from the
+			point of impact at high transverse velocity. Using FastJet, we are able
+			to take the particle data from Pythia and get a set of grouped vectors
+			of particles which belong to what FastJet believes is a jet. These are
+			then saved off to another file, similar to the process in stage one. </p>
+			<br>
+		  <h4> 3. Data analysis and graphing </h4>
+		  <p> In the third and final stage, the collected data and information from
+			stage two is taken and general average statistics are generated from the
+			multiplicity of events. This gives us the averages we require to
+			calculate the observables which have been developed by the team long
+			before I arrived. Using ROOT, we print these observables and helpful
+			statistics as histograms, generally as functions of multiplicity. </p>
+		</div>
+	</body>
+</html>
