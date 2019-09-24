@@ -20,7 +20,7 @@ div{
 }
 	
 body{
-    background-image: linear-gradient(#385159, #263337); /* Basic background gradient, matches video parlor */
+    background-color: #262329; 
 }
     
 /*Fader button formatting*/ 
@@ -46,6 +46,7 @@ button{
 .navbar {
 	overflow: hidden;
 	display: grid;
+	grid-template-areas: 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
 }
 
@@ -54,18 +55,15 @@ button{
 	float: left;
 	font-size: 3vw;
 	text-align: center;
-	padding: 2vw 6.2vw;
+	padding: 1vw 3vw;
 	text-decoration: none;
 	margin: none;
 	
-	background-image: linear-gradient(#ACBFC4, #517580);
+	background-color: #A7A3AC;
 	
-	border-style: solid;
+	/*border-style: solid;
 	border-color: black;
-	border-width: .3vw;
-	
-	
-	box-shadow: 0px 12px 24px 0px rgba(0,0,0,0.6);
+	border-width: .3vw;*/
 }
 
 /* The dropdown container */
@@ -74,39 +72,40 @@ button{
 	overflow: hidden;
 }
 
+.dropdown a, .dropdown button{
+	padding: 2vw 3vw;
+}
+
 /* Dropdown button */
 .dropdown .dropbtn {
 	font-size: 3vw;
-	margin: none;
+	margin: auto;
 	outline: none;
+	border: none;
 	
-	border-style: solid;
+	/*border-style: solid;
 	border-color: black;
-	border-width: .3vw;
+	border-width: .3vw;*/
 	
-	padding: 2vw 6.2vw;
-	
-	background-image: linear-gradient(#ACBFC4, #517580);
+	background-color: #A7A3AC;
 }
 
 /* Add a pink background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-	background-image: linear-gradient(#F6C7CD, #D57C87);
+	background-color: #F6C7CD;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
 	all: unset;
-	/*background-image: linear-gradient(#89A4AC, #517580);*/
-	background-color: #385159;
+	background-color: #847F8C;
 	
-	border-style: solid;
+	/*border-style: solid;
 	border-color: black;
-	border-width: .3vw;
+	border-width: .3vw;*/
 	
 	display: none;
 	position: absolute;
-	box-shadow: 0px 12px 24px 0px rgba(0,0,0,0.6);
 	z-index: 10;
 }
 
@@ -114,7 +113,7 @@ button{
 .dropdown-content a {
 	all: unset;
 	font-size: 2.5vw;
-	color: white;
+	color: black;
 	margin: none;
 	outline: none;
 	
@@ -129,7 +128,7 @@ button{
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #385159;
+	background-color: #F6C7CD;
 }
 
 /* Show the dropdown menu on hover */
@@ -140,13 +139,16 @@ button{
 /*Header formatting*/  
 .mainhead{
 	font-size: 10vw;
+	font-weight: bold;
+	color: #A7A3AC;
 	display: block;
-	margin-left: 1vw;
+	margin-top: 2w;
+	margin-bottom: 0.5vw;
 	white-space: nowrap;
 		
 	display: grid;
 	justify-items: center;
-	align-items; center;
+	align-items: center;
 }
 
 .mainhead img{
@@ -156,16 +158,28 @@ button{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.subhead{
+	font-size: 3vw;
+	color:  #A7A3AC;
+	display: block;
+	margin-top: 0.5vw;
+	margin-bottom: 5vw;
+	white-space: nowrap;
+		
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
 	
 /*Main generic text display block formatting*/
 .maininfo{
 	border-style: solid;
 	border-width: .3vw;
-	border-color: black;
 	
-	background-image: linear-gradient(#89A4AC, #517580);
+	background-image: linear-gradient(#A7A3AC, #87838D);
 	font-size: calc(5px + 2vw);
-	padding: 4vw;
+	padding: 2vw;
 	margin-top: 6vw;
 	margin-bottom: 25vw;
 	margin-right: auto;
@@ -196,7 +210,7 @@ button{
 	border-width: .3vw;
 	border-color: black;
 	
-	background-image: linear-gradient(#89A4AC, #517580);
+	background-image: linear-gradient(#A7A3AC, #87838D);
 	font-size: calc(5px + 2vw);
 	padding: 4vw;
 	margin-top: 4vw;
@@ -267,99 +281,11 @@ button{
 		grid-template-columns: 1fr 1fr;
 	}
 	
-}
-	
-/*Maximum font size information, normalled for 1920px width*/
-@media only screen and (min-width: 1920px){
-	/* Links inside the navbar */
-	.navbar a {
-		font-size: 28.8px;
-		padding: 38.4px 119.04px;
-		
-		border-width: 5.76px;
-	}
-	
-	/* Dropdown button */
-	.dropdown .dropbtn {
-		font-size: 28.8px;
-		padding: 38.4px 119.04px;
-		
-		border-width: 5.76px;
-	}
-	
-	/* Links inside the dropdown */
-	.dropdown-content a {
-		font-size: 23.04px;
-		padding: 38.4px 96px;
-	}
-	
-	/*Header formatting*/  
-	.mainhead{
-		font-size: 96px;
-		margin-left: 38.4px;
-	}
-	
-	.mainhead img{
-		width: 1728px;
-	}
-		
-	.blogpost{
-		font-size: 24.2px;
-		padding: 76.8px;
-		margin-top: 76.8px;
-		margin-bottom: 96px;
-		max-width: 1344px;
-		
-		border-width: 5.76px;
-	}
-	
-	.blogtitle{
-		font-size: 62.6px;
-	}
-	
-	.blogdate{
-		font-size: 14.6px;
-	}
-	
-	.blogpost img{
-		width: 576px;
-	}
-		
-	/*Main generic text display block formatting*/
 	.maininfo{
-		font-size: 24.2px;
-		padding: 76.8px;
-		margin-top: 115.2px;
-		margin-bottom: 480px;
-		margin-right: auto;
-		margin-left: auto;
-		max-width: 1344px;
-		
-		border-width: 5.76px;
+		max-width: 90vw;
 	}
-	
-	.maininfo p{
-		margin-left: 38.4px;
+
+	.blogpost{
+		max-width: 82vw;
 	}
-	
-	.maininfo img{
-		width: 576px;
-		margin-top: 76.8px;
-		margin-bottom: 76.8px;
-	}	
-	
-	.bandcamp{
-		grid-gap: 76.8px;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	
-	.albums{
-		grid-gap: 76.8px;
-	}
-	
-	.albums img{
-		width: 345.6px;
-		height: auto;
-	}
-	
 }
